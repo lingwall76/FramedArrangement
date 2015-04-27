@@ -35,6 +35,11 @@
     [self.view addSubview:self.yellowView];
     
     
+    [self layoutSquares];
+    [self layoutHorizontalRectangles];
+    [self layoutVerticalRectangles];
+    [self layoutDiagonalSquares];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,7 +58,6 @@
 */
 
 - (void)layoutSquares
-
 {
     float squareWidth = CGRectGetWidth(self.view.bounds) /2.0;
     float squareHeight = CGRectGetHeight(self.view.bounds) /2.0;
@@ -71,8 +75,8 @@
 - (void)layoutHorizontalRectangles
 
 {
-    float squareWidth = CGRectGetWidth(self.view.bounds);
-    float squareHeight = CGRectGetHeight(self.view.bounds) /4.0;
+    CGFloat squareWidth = CGRectGetWidth(self.view.bounds);
+    CGFloat squareHeight = CGRectGetHeight(self.view.bounds) /4.0;
     
     
     self.redView.frame = CGRectMake(0.0, 0.0, squareWidth, squareHeight);
